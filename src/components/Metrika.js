@@ -1,17 +1,15 @@
-'use client';
+'use client'
 
-import { useEffect } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
-import Script from 'next/script';
+import {useEffect} from 'react'
+import {usePathname, useSearchParams} from 'next/navigation'
+import Script from 'next/script'
 
 export function Metrika() {
-    const pathName = usePathname();
-    const searchParams = useSearchParams();
-
+    const pathName = usePathname()
+    const searchParams = useSearchParams()
     useEffect(() => {
-        ym(103662704, 'hit', window.location.href);
-    }, [pathName, searchParams]);
-
+        ym(103662704, 'hit', window.location.href)
+    }, [pathName, searchParams])
     return (
         <Script id="yandex-metrika">
             {`
@@ -24,13 +22,9 @@ export function Metrika() {
            ym(103662704, "init", {
                 clickmap:true,
                 trackLinks:true,
-                accurateTrackBounce:true,
-                ssr:true, 
-                webvisor:true, 
-                ecommerce:"dataLayer", 
                 accurateTrackBounce:true
            });
       `}
         </Script>
-    );
+    )
 }
