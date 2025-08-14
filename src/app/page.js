@@ -13,7 +13,12 @@ export default function Home() {
         <main style={{ position: 'relative' }}>
             <Banner />
             <PhoneBlock
-                style={{ paddingTop: { xs: '50px', sm: '100px' }, paddingBottom: { xs: '50px', sm: '50px' } }} />
+                style={{
+                    paddingTop: { xs: '50px', sm: '100px' },
+                    paddingBottom: { xs: '50px', sm: '50px' },
+                }}
+                text='Ответим на любые вопросы по госпитализации и лечению. Звоните!'
+            />
             {/*<CardsBlock />*/}
             <MainInfoBlock />
             {/*<AboutBlock />*/}

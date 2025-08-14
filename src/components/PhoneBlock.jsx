@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Link, Typography } from '@mui/material';
 import { phoneNumber } from '@/config';
 
-const PhoneBlock = ({style = {}}) => {
+const PhoneBlock = ({style = {}, text = 'Запись на госпитализацию'}) => {
     return (
         <Box
             sx={{
@@ -22,12 +22,12 @@ const PhoneBlock = ({style = {}}) => {
                     color: 'var(--red)',
                     fontStyle: 'italic',
                     textAlign: 'center',
-                    textWrap: 'balance',
+                    // textWrap: 'balance',
                     fontWeight: 500,
                     fontSize: { xs: 22, sm: 28, md: 32 },
                 }}
             >
-                Запись на госпитализацию
+                {text}
             </Typography>
 
             <Box
