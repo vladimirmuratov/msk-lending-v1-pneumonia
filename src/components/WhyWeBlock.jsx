@@ -1,11 +1,10 @@
 import { Box, Typography } from '@mui/material';
-import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 import { memo } from 'react';
 
 export const WhyWeBlock = memo(() => {
     return (
         <Box
-            component="section"
+            component="article"
             id="whyWe"
             sx={{
                 scrollMarginTop: { xs: '120px', sm: '50px' },
@@ -27,44 +26,30 @@ export const WhyWeBlock = memo(() => {
             >
                 Почему выбирают нас?
             </Typography>
+            <Typography
+                sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)' }}>
+                Знаете, почему к нам так часто обращаются люди, когда нужно что-то серьёзное? Во-первых, <Box
+                component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>мы работаем
+                напрямую с крупными клиниками</Box> — не какими-то абстрактными медицинскими центрами, а ведущими
+                федеральными и ведомственными больницами Москвы. Постоянно поддерживаем с ними хороший контакт — это
+                реально работает на наших пациентов. Если нужна госпитализация, вопрос решается максимально быстро —
+                бывает, человек поступает в стационар буквально через пару часов. Без этого бесконечного ожидания, когда
+                кажется, что неделя тянется дольше месяца.
+            </Typography>
+            <Typography
+                sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                Что ещё? Люди получают доступ к продвинутому оборудованию и отличным специалистам. Не просто “хороший
+                врач”, а тот самый профессионал, которого советуют друг другу в сложных случаях.
+            </Typography>
+            <Typography
+                sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                И главная фишка — <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>каждому пациенту
+                выделяем персонального куратора</Box>. Это такой человек-наставник: всё
+                объяснит понятным языком и поможет не запутаться среди диагнозов и бюрократии. Ты чувствуешь себя не
+                очередной строчкой в таблице, а действительно важным человеком, которому помогают разрулить ситуацию от
+                начала до конца.
+            </Typography>
 
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: '10px', }}>
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <CheckBoxOutlinedIcon sx={{ color: 'var(--red)' }} />
-                    <Typography
-                        variant="h3"
-                        sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                        Работаем с ведущими федеральными и ведомственными клиниками Москвы
-                    </Typography>
-                </Box>
-                <Box
-                    sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <CheckBoxOutlinedIcon sx={{ color: 'var(--red)' }} />
-                    <Typography
-                        variant="h3"
-                        sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                        Госпитализация возможна в течение нескольких часов
-                    </Typography>
-                </Box>
-                <Box
-                    sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <CheckBoxOutlinedIcon sx={{ color: 'var(--red)' }} />
-                    <Typography
-                        variant="h3"
-                        sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                        Доступ к современному оборудованию и квалифицированным врачам
-                    </Typography>
-                </Box>
-                <Box
-                    sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <CheckBoxOutlinedIcon sx={{ color: 'var(--red)' }} />
-                    <Typography
-                        variant="h3"
-                        sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                        Персональный куратор для каждого пациента
-                    </Typography>
-                </Box>
-            </Box>
         </Box>
     );
 });

@@ -1,6 +1,5 @@
 import { memo } from 'react';
 import { Box, Typography } from '@mui/material';
-import LocalHospitalOutlinedIcon from '@mui/icons-material/LocalHospitalOutlined';
 
 export const MainInfoBlock = memo(() => {
     return (
@@ -15,6 +14,7 @@ export const MainInfoBlock = memo(() => {
             }}
         >
             <Box
+                component="article"
                 sx={{
                     paddingBottom: { xs: '25px', sm: '50px' },
                 }}
@@ -31,22 +31,35 @@ export const MainInfoBlock = memo(() => {
                     Круглосуточная помощь. Госпитализация без ожидания
                 </Typography>
 
-                <Typography component="p" sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', }}>
-                    <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>Пневмония у пожилых</Box> — это
-                    опасное воспалительное заболевание лёгких, которое особенно тяжело протекает у пациентов старше
-                    60–65 лет. Ослабленный иммунитет, хронические болезни и замедленные обменные процессы увеличивают
-                    риск осложнений и смертности.
+                <Typography sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', }}>
+                    <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>Пневмония у людей в
+                        возрасте</Box> — штука непростая. Когда мы говорим о пациенте старше 60–65 лет, сразу нужно
+                    иметь в виду: силы организма уже не те, иммунитет работает на совсем других скоростях, и весь багаж
+                    хронических болячек тоже даёт о себе знать. Всё это вместе — как «идеальный шторм», который делает
+                    любое воспаление лёгких не просто неприятностью, а потенциально очень серьёзным испытанием для
+                    здоровья (и здесь цифры статистики никуда не денешь — именно у пожилых осложнения и фатальные исходы
+                    случаются значительно чаще).
                 </Typography>
-                <Typography component="p"
-                            sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
-                    <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>Медицинская Сервисная
-                        Компания</Box> организует платная госпитализация пожилых пациентов в
-                    ведущие клиники Москвы, в том числе для лечения застойной пневмонии .
-
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    Есть ситуации, когда помощи из поликлиники мало — нужно полноценное наблюдение и неглупые
+                    специалисты под рукой. Вот тут на сцену выходит госпитализация. И если у вас или ваших близких нет
+                    времени стоять в очередях или изучать все варианты поиска хорошей клиники, на помощь может
+                    прийти <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>Медицинская Сервисная
+                    Компания</Box>: по сути, они берут на себя организацию платной госпитализации в
+                    проверенные московские стационары — там, где умеют работать с возрастными пациентами и знают, как
+                    вести тот же случай застойной пневмонии (а это уже отдельная «песня» среди пневмоний).
+                </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    В общем, если ситуация требует внимательного отношения, а хочется быть уверенным: человек будет под
+                    наблюдением специалистов, с современными возможностями диагностики и лечения — вариант с такой
+                    сервисной поддержкой существенно упрощает задачу семьи.
                 </Typography>
             </Box>
 
             <Box
+                component="article"
                 sx={{
                     paddingY: { xs: '25px', sm: '50px' },
                 }}
@@ -62,100 +75,42 @@ export const MainInfoBlock = memo(() => {
                 >
                     Что такое застойная пневмония у пожилых?
                 </Typography>
-
                 <Typography
-                    sx={{
-                        color: 'var(--main-color)',
-                        marginBottom: '20px',
-                        fontSize: { xs: '20px', sm: '24px' },
-                        fontWeight: 400
-                    }}
-                >
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)' }}>
                     <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>Застойная пневмония</Box> — это
-                    форма воспаления лёгких, которая развивается на фоне длительного лежачего
-                    положения и недостаточной вентиляции лёгких.
-                    Чаще встречается у пациентов:
+                    такая неприятная штука, с которой часто сталкиваются люди в солидном
+                    возрасте, особенно если они подолгу прикованы к постели. Представьте: человек мало двигается, целыми
+                    днями лежит — например, после инсульта, тяжелой травмы или из-за слабости из-за другого хронического
+                    заболевания. Лёгкие в таком положении работают не на полную катушку: дыхание становится
+                    поверхностным, отдельные участки легочной ткани не проветриваются как положено. Вот тут и начинается
+                    проблема.
+                </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    В застоявшихся альвеолах (это такие мини-воздушные мешочки внутри лёгких) скапливается слизь,
+                    которая по идее должна выворачиваться наружу с кашлем или активными движениями. А у лежачего
+                    человека она оседает — идеальная почва для микробов. Бактерии только этого и ждут: иммунитет
+                    ослаблен, легочная ткань плохо снабжается кислородом — и вот уже развивается очаг воспаления.
+                </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    Особенно часто такое осложнение случается у пожилых пациентов, ведь у них и дыхательные мышцы
+                    слабее, и обмен веществ замедлен, и кашлевой рефлекс притупляется. Поэтому врачи всегда настороженно
+                    относятся к любым признакам бронхита или температуры у тех, кто лежит длительно. Здесь обычное
+                    "отлежусь и всё пройдет" не работает: застойная пневмония может развиваться почти незаметно — без
+                    ярко выраженного кашля или высокой температуры — пока уже не станет реально тяжело дышать.
+                </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    Проще говоря, застойная пневмония — это реакция организма на неподвижность и недостаточную
+                    вентиляцию лёгких. Особенно бдительными стоит быть родственникам и персоналу в больницах и домах
+                    престарелых: любое ухудшение состояния требует внимания — возможно, причина в том числе и здесь.
                 </Typography>
 
-                <Box sx={{ display: 'flex', flexDirection: 'column', gap: '10px', }}>
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            После инсульта, инфаркта, травм
-                        </Typography>
-                    </Box>
-                    <Box
-                        sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            С хронической сердечной недостаточностью
-                        </Typography>
-                    </Box>
-                    <Box
-                        sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            При длительном пребывании в постели
-                        </Typography>
-                    </Box>
-
-                    <Typography
-                        sx={{
-                            color: 'var(--red)',
-                            marginY: '20px',
-                            fontSize: { xs: '20px', sm: '24px' },
-                            fontWeight: 400
-                        }}
-                    >
-                        Особенности:
-                    </Typography>
-
-                    <Box
-                        sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            Медленное начало, без выраженной температуры
-                        </Typography>
-                    </Box>
-                    <Box
-                        sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            Одышка и слабость нарастают постепенно
-                        </Typography>
-                    </Box>
-                    <Box
-                        sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            Возможен кашель с трудноотделяемой мокротой
-                        </Typography>
-                    </Box>
-                    <Box
-                        sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            Высок риск дыхательной недостаточности
-                        </Typography>
-                    </Box>
-                </Box>
             </Box>
 
             <Box
+                component="article"
                 sx={{
                     paddingY: { xs: '25px', sm: '50px' },
                 }}
@@ -171,48 +126,53 @@ export const MainInfoBlock = memo(() => {
                 >
                     Почему лечение пневмонии у пожилых требует госпитализации?
                 </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)' }}>
+                    Когда речь заходит <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>о пневмонии у
+                    пожилых</Box>, большинство врачей настраиваются на
+                    тревожную волну сразу. Не потому, что хочется перестраховаться лишний раз, а потому что реальность
+                    такова: осложнения у людей в возрасте развиваются куда чаще и протекают тяжелее. Например, из
+                    обычной пневмонии может вырасти <Box component="span" sx={{
+                    color: 'var(--red)',
+                    fontWeight: 400
+                }}>плеврит</Box> (это когда воспаляется оболочка вокруг легких), образоваться
+                    гнойная полость в самом легком (абсцесс) или, не дай бог, начнется <Box component="span" sx={{
+                    color: 'var(--red)',
+                    fontWeight: 400
+                }}>заражение крови — сепсис</Box>. Эти состояния редко дают второй шанс, если упустить момент.
+                </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    Еще один нюанс — за пожилыми непременно <Box component="span"
+                                                                 sx={{ color: 'var(--red)', fontWeight: 400 }}>нужен
+                    пристальный присмотр</Box>. Болезнь иногда делает резкие
+                    «скачки» — только все было нормально, а через пару часов уже резкое ухудшение. Дома такого не
+                    отследишь: медсестра не заглянет ночью проверить кислородизацию, никто не заметит затрудненного
+                    дыхания или падения давления в самом начале.
+                </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>Теперь про антибиотики</Box>.
+                    Тут из разряда «просто назначить стандартный курс» мы быстро переходим к
+                    целой эпопее с подбором схемы. У пожилых свой букет хронических болячек: почки работают по-другому,
+                    печень сбавляет обороты... Всё это серьёзно влияет на то, какой препарат подойдет и какая доза будет
+                    безопасна.
+                </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    Ну и последний штрих: часто пожилым <Box component="span"
+                                                             sx={{ color: 'var(--red)', fontWeight: 400 }}>нужны
+                    процедуры помимо таблеток</Box> — кислородная поддержка (маску
+                    надеть дома далеко не всегда получится), физиотерапия и элементарная дыхательная гимнастика с
+                    инструктором. <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>В итоге
+                    госпитализация оказывается самым разумным выбором</Box> — просто чтобы реакция была
+                    максимально быстрой, а уход комплексным.
+                </Typography>
 
-                <Box sx={{ display: 'flex', flexDirection: 'column', gap: '10px', }}>
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            Высокая вероятность осложнений: плеврит, абсцесс лёгкого, сепсис
-                        </Typography>
-                    </Box>
-                    <Box
-                        sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            Необходимость круглосуточного наблюдения
-                        </Typography>
-                    </Box>
-                    <Box
-                        sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            Подбор антибиотикотерапии с учётом возраста и сопутствующих заболеваний
-                        </Typography>
-                    </Box>
-                    <Box
-                        sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            Оксигенотерапия, физиопроцедуры, дыхательная гимнастика
-                        </Typography>
-                    </Box>
-
-                </Box>
             </Box>
 
             <Box
+                component="article"
                 sx={{
                     paddingTop: { xs: '25px', sm: '50px' },
                 }}
@@ -228,67 +188,63 @@ export const MainInfoBlock = memo(() => {
                 >
                     Как мы помогаем?
                 </Typography>
-
                 <Typography
-                    sx={{
-                        color: 'var(--main-color)',
-                        marginBottom: '15px',
-                        fontSize: { xs: '20px', sm: '24px' },
-                        fontWeight: 400
-                    }}
-                >
-                    Наша компания организует:
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)' }}>
+                    <Box component="span"
+                         sx={{ color: 'var(--red)', fontWeight: 400 }}>Вот если коротко</Box> — мы становимся вашими
+                    путеводителями по довольно непростой системе столичного
+                    здравоохранения. Как это работает на практике? Например, если вдруг понадобилась срочная (или,
+                    наоборот, плановая) госпитализация в московскую клинику <Box component="span"
+                                                                                 sx={{
+                                                                                     color: 'var(--red)',
+                                                                                     fontWeight: 400
+                                                                                 }}>без полиса ОМС</Box> — вы не
+                    останетесь один на один со всеми этим бумажными лабиринтами и “закрытыми дверями”. Мы напрямую
+                    договариваемся с медучреждениями и берём на себя все формальности.
+                </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    <Box component="span"
+                         sx={{ color: 'var(--red)', fontWeight: 400 }}>Дальше — ни один важный анализ или снимок не
+                        уйдёт из виду</Box>: рентген или КТ лёгких, полный комплекс
+                    лабораторных исследований и консультации опытных специалистов — всё это мы организуем быстро и в том
+                    порядке, который действительно нужен вам (а не просто ради галочки).
+                </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    <Box component="span"
+                         sx={{ color: 'var(--red)', fontWeight: 400 }}>Диагноз поставлен?</Box> Тогда вместе с врачами
+                    составим понятный индивидуальный план лечения. Тут наша задача не только подобрать грамотную схему
+                    терапии, но и остаться рядом: следить за динамикой, быть на связи для мелких вопросов и крупных
+                    решений.
+                </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    <Box component="span"
+                         sx={{ color: 'var(--red)', fontWeight: 400 }}>Если нужна перевозка из другого города или даже
+                        страны СНГ</Box> — поможем разобраться с логистикой, чтобы всё прошло безопасно и без
+                    нервотрёпки. А когда острый этап позади, мы не исчезаем: <Box component="span"
+                                                                                  sx={{
+                                                                                      color: 'var(--red)',
+                                                                                      fontWeight: 400
+                                                                                  }}>организуем патронаж на дому</Box>,
+                    подключим
+                    реабилитологов и поможем вернуться к привычной жизни как можно быстрее.
+                </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    В общем: делаем так, чтобы медицинские вопросы решались по-человечески — <Box component="span"
+                                                                                                  sx={{
+                                                                                                      color: 'var(--red)',
+                                                                                                      fontWeight: 400
+                                                                                                  }}>спокойно, понятно и
+                    под контролем</Box>.
                 </Typography>
 
-                <Box sx={{ display: 'flex', flexDirection: 'column', gap: '15px', }}>
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            Экстренную и плановую госпитализацию в московские клиники без полиса ОМС
-                        </Typography>
-                    </Box>
-                    <Box
-                        sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            Полное обследование: рентген/КТ лёгких, анализы, консультации специалистов
-                        </Typography>
-                    </Box>
-                    <Box
-                        sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            Индивидуальный план лечения с контролем состояния
-                        </Typography>
-                    </Box>
-                    <Box
-                        sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            Перевод из других регионов и СНГ, а также между клиниками
-                        </Typography>
-                    </Box>
-                    <Box
-                        sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            Патронаж и реабилитация после выписки
-                        </Typography>
-                    </Box>
-                </Box>
             </Box>
 
             <Box
+                component="article"
                 sx={{
                     paddingTop: { xs: '25px', sm: '50px' },
                 }}
@@ -304,53 +260,66 @@ export const MainInfoBlock = memo(() => {
                 >
                     Этапы лечения пневмонии у пожилых
                 </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)' }}>
+                    Окей, попробую рассказать <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>об
+                    этапах лечения пневмонии у пожилых</Box> так, чтобы за этим были видны люди —
+                    и врачи, и пациенты.
+                </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>Всё стартует с диагностики</Box>.
+                    Тут врачу почти как детективу: нужно понять, что именно вызвало
+                    воспаление, насколько оно серьёзное, не спрятались ли где-нибудь <Box component="span" sx={{
+                    color: 'var(--red)',
+                    fontWeight: 400
+                }}>осложнения вроде плеврита или сердечной недостаточности</Box> (чем старше человек, тем выше шанс, что
+                    одна болячка тащит за собой другую). Бывает, картина на рентгене размыта или анализы двусмысленны —
+                    приходится идти в обход:
+                    расспрашивать подробно про самочувствие вчера и неделю назад, спрашивать о хрипах или температуре,
+                    которую легко недооценить (“Да подумаешь — 37, 2! ”).
+                </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>Как только ясно, с чем мы имеем
+                        дело — начинаем атаку</Box>. Основное оружие здесь антибиотики: это база
+                    для бактериальных пневмоний (а именно они любят выбирать пожилых). Совсем недавно приходилось
+                    действовать почти наощупь — теперь же бактерии “светят” свою чувствительность к препаратам
+                    достаточно быстро. Плюс ко всему часто назначают противовоспалительные и муколитические средства —
+                    они не только снижают жар и ломоту, но ещё помогают избавиться от мокроты (иначе лёгкие словно
+                    забиваются илом).
+                </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>Этим лечение не
+                        ограничивается</Box>. Поддерживающая терапия звучит как что-то мягкое и второстепенное — а
+                    на практике без неё никак. Кислородная маска часто становится чуть ли не лучшим другом пациента на
+                    время болезни — ведь одной из самых серьёзных опасностей здесь становится нехватка кислорода. При
+                    обезвоживании капают инфузии, а по анализам могут добавить витамины — особенно группы B и C
+                    (организму нужен ресурс на борьбу).
+                </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>Когда кризис миновал и
+                        температура улеглась</Box> — появляется возможность для следующего шага:
+                    физиотерапия плюс лечебная физкультура. Звучит скучно? Но благодаря дыхательным упражнениям и
+                    простейшим движениям в постели удается “раскачать” лёгкие после застоя и не дать развиться спайкам
+                    или новым инфекциям (проваляться две недели без движения крайне опасно для пожилого! ).
+                </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>Ну и последний пункт никакая
+                        медицина пока не отменяла</Box>: наблюдение и профилактика повторного
+                    заражения. После болезни организм долго остаётся уязвимым; нужна бдительность со стороны
+                    родственников или соцработников — отслеживать каждый тревожный кашель или новые жалобы.
+                </Typography>
+                <Typography
+                    sx={{ fontSize: { xs: 18, sm: 20 }, color: 'var(--main-color)', marginTop: '10px' }}>
+                    Вот такой неброский сценарий из пяти актов — иногда драматичный, иногда совсем обыденный. И каждый
+                    пункт — результат того самого опыта работы “на земле”, когда за сложносочинёнными словами стоят
+                    конкретные люди со своими историями и страхами.
+                </Typography>
 
-                <Box sx={{ display: 'flex', flexDirection: 'column', gap: '15px', }}>
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>Диагностика</Box> — определение типа и стадии воспаления, исключение осложнений
-                        </Typography>
-                    </Box>
-                    <Box
-                        sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>Медикаментозная терапия</Box> — антибиотики, противовоспалительные и муколитики
-                        </Typography>
-                    </Box>
-                    <Box
-                        sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>Поддерживающая терапия</Box> — кислород, инфузии, витамины
-                        </Typography>
-                    </Box>
-                    <Box
-                        sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>Физиотерапия и ЛФК</Box> — улучшение вентиляции лёгких, профилактика застойных явлений
-                        </Typography>
-                    </Box>
-                    <Box
-                        sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <LocalHospitalOutlinedIcon sx={{ color: 'var(--red)' }} />
-                        <Typography
-                            variant="h3"
-                            sx={{ color: 'var(--main-color)', fontSize: { xs: 18, sm: 20 }, fontWeight: 400 }}>
-                            <Box component="span" sx={{ color: 'var(--red)', fontWeight: 400 }}>Контроль и профилактика рецидивов</Box>
-                        </Typography>
-                    </Box>
-                </Box>
             </Box>
 
         </Box>

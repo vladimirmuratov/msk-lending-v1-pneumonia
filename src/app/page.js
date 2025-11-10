@@ -1,6 +1,5 @@
 import { Banner } from '@/components/Banner';
 import { WhyWeBlock } from '@/components/WhyWeBlock';
-import { WeRespondBlock } from '@/components/WeRespondBlock';
 import { PartnersBlock } from '@/components/PartnersBlock';
 import { ContactsBlock } from '@/components/ContactsBlock';
 import { FormAction } from '@/components/FormAction';
@@ -17,13 +16,13 @@ export default function Home() {
                     paddingTop: { xs: '50px', sm: '100px' },
                     paddingBottom: { xs: '50px', sm: '50px' },
                 }}
-                text='Ответим на любые вопросы по госпитализации и лечению. Звоните!'
+                text="Ответим на любые вопросы по госпитализации и лечению. Звоните!"
             />
             {/*<CardsBlock />*/}
             <MainInfoBlock />
             {/*<AboutBlock />*/}
             <WhyWeBlock />
-            <WeRespondBlock />
+            {/*<WeRespondBlock />*/}
             {/*<WhatWeOfferBlock/>*/}
             {/*<DirectionsOfHospitalizationBlock />*/}
             {/*<BaseAccordion id="faq" title="Частые вопросы" items={faq} />*/}
