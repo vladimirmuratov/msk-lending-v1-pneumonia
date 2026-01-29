@@ -17,8 +17,7 @@ export const metadata = {
     description: 'Лечение пневмонии в клиниках Москвы: круглосуточное наблюдение, современные методы, помощь пожилым пациентам. Платная госпитализация без ОМС.',
     keywords: ['лечение пневмонии у пожилых, застойная пневмония лечение, пневмония у пожилых людей, лечение пневмонии в Москве, терапия застойной пневмонии, госпитализация при пневмонии, пневмония у стариков, лечение застойной пневмонии в Москве, реабилитация после пневмонии, платная госпитализация при пневмонии'],
     other: {
-        // ['yandex-verification']: '63b15477d46dd1f6', // https://pneumonia.mskdoctor.ru
-        ['yandex-verification']: 'cdd8c1906b6fe76e', // https://msk-pneumonia.vercel.app
+        ['yandex-verification']: 'cdd8c1906b6fe76e',
     },
     openGraph: {
         title: 'Медицинская Сервисная Компания. Лечение пневмонии у пожилых в Москве — диагностика и терапия застойной пневмонии. Звоните! 8 (499) 719-81-00, 24/7',
@@ -27,6 +26,9 @@ export const metadata = {
         url: 'https://msk-pneumonia.vercel.app',
         type: 'website',
         locale: 'ru_RU',
+    },
+    alternates: {
+        canonical: 'https://msk-pneumonia.vercel.app',
     }
 };
 
