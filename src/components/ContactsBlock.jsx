@@ -1,10 +1,10 @@
+import { memo } from 'react';
 import { Box, Link, Typography } from '@mui/material';
 import { email, phoneNumber, phoneNumber2 } from '@/config';
-// import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import SocialBlock from '@/components/SocialBlock';
-import { memo } from 'react';
+// import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
 
 export const ContactsBlock = memo(() => {
     return (
